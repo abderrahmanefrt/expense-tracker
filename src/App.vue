@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<Header />
+<div class="container">
+  <Balance />
+  <IncomeExpensive />
+  <Transaction :Transactions="Transactions" />
+  <Addtransaction />
+
+</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import Header from './components/Header.vue';
+import Balance from './components/Balance.vue';
+import IncomeExpensive from './components/IncomeExpensive.vue';
+import Transaction from './components/Transaction.vue';
+import Addtransaction from './components/Addtransaction.vue';
+import {ref} from 'vue';
 </script>
 
 <style>
